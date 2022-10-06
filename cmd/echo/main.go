@@ -1,11 +1,13 @@
 package main
 
 import (
-	"log"
+	"github.com/mkaiho/go-ecs-batch-sample/logging"
 )
 
-func init() {}
+func init() {
+	logging.InitLoggerWithZap()
+}
 
 func main() {
-	log.Println("not implemented")
+	logging.GetLogger().Info("not implemented")
 }
